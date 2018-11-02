@@ -10,36 +10,36 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace HotelGUI
 {
     /// <summary>
-    /// Interaktionslogik für MainWindow.xaml
+    /// Interaktionslogik für Menu2.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Menu2 : Window
     {
-        public MainWindow()
+        public Menu2()
         {
-            
             InitializeComponent();
-            //test
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Menu2 m1 = new Menu2();
-            m1.Show();
-            this.Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            f2.Content = new Login();
+            c1.Content = new Page1();
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void bClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void b1Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
 
         }
