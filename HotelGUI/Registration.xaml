@@ -17,29 +17,70 @@
             <Label Content="Anrede*"></Label>
             
         </StackPanel>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,15,0,0" Grid.Column="0">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,35,0,0" Grid.Column="0">
             <Label Content="Vorname*"></Label>
-            <Label Content="Name*"></Label>
-            <Label Content="Name zusatz"></Label>
+            
         </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,48,0,0" Grid.Column="0">
+            <Label Content="Name*"></Label>
 
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,115,0,0" Grid.Column="0">
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,61,0,0" Grid.Column="0">
+            <Label Content="Name zusatz"></Label>
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,90,0,0" Grid.Column="0">
             <Label Content="Strassen Nr"></Label>
+            
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,103,0,0" Grid.Column="0">
+
             <Label Content="Plz*"></Label>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,116,0,0" Grid.Column="0">
+
             <Label Content="Ort*"></Label>
         </StackPanel>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,215,0,0" Grid.Column="0">
+        
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,145,0,0" Grid.Column="0">
             <Label Content="Telefon"></Label>
-            <Label Content="Mobile"></Label>
-            <Label Content="Email"></Label>
+            
         </StackPanel>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,315,0,0" Grid.Column="0">
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,158,0,0" Grid.Column="0">
+             <Label Content="Mobile"></Label>
+
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,171,0,0" Grid.Column="0">
+          <Label Content="Email"></Label>
+
+        </StackPanel>
+       
+        
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,200,0,0" Grid.Column="0">
             <Label Content="Web"></Label>
-            <Label Content="Geburtsdatum"></Label>
-            <Label Content="Pass Nr"></Label>
+
         </StackPanel>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,415,0,0" Grid.Column="0">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,213,0,0" Grid.Column="0">
+            <Label Content="Geburtsdatum"></Label>
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,226,0,0" Grid.Column="0">
+            <Label Content="Pass Nr"></Label>
+
+        </StackPanel>
+        
+        
+        
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,256,0,0" Grid.Column="0">
             <Label Content="Nationalität"></Label>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0" Grid.Column="1">
+            <Label Content="Herr"></Label>
+            <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center"></RadioButton>
+            <Label Content="Frau"></Label>
+            <RadioButton VerticalAlignment="Center" HorizontalAlignment="Center"></RadioButton>
         </StackPanel>
     </Grid>
 </Page>
