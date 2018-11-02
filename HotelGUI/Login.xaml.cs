@@ -20,9 +20,35 @@ namespace HotelGUI
     /// </summary>
     public partial class Login : Page
     {
+        CheckData d1;
         public Login()
         {
             InitializeComponent();
+        }
+        
+        private void onclickSubmit(object sender, RoutedEventArgs e)
+        {
+            string uncheckedUSN = lt1.Text;
+            string uncheckedPW = lt2.Text;
+             
+
+            
+           
+            if(uncheckedUSN != "" && uncheckedPW != "" && uncheckedUSN != "Enter Username" && uncheckedPW != "Enter Password")
+            {
+               
+                if (d1.isUserInDB(uncheckedUSN, uncheckedPW) == true){
+                   HiddenMessage.Content = "accepted";
+                }
+                else
+                 {
+                 HiddenMessage.Content = "false";
+                 }
+            }
+            else
+            {
+                HiddenMessage.Content ="false";
+            }
         }
     }
 }
