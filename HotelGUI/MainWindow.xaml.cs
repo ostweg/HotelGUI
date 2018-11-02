@@ -23,6 +23,7 @@ namespace HotelGUI
         public MainWindow()
         {
             InitializeComponent();
+            //test
         }
     }
 }
