@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace HotelGUI
 {
     /// <summary>
-    /// Interaktionslogik für MainWindow.xaml
+    /// Interaktionslogik für Page1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Page1 : Page
     {
-        public MainWindow()
+        public Page1()
         {
             InitializeComponent();
-            //test
-        }
-        private void b1Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void bClick(object sender, RoutedEventArgs e)
-        {
-            c1.Content =new Page1();
         }
     }
 }
