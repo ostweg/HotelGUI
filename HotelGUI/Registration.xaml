@@ -82,5 +82,21 @@
             <Label Content="Frau"></Label>
             <RadioButton VerticalAlignment="Center" HorizontalAlignment="Center"></RadioButton>
         </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="34">
+            <TextBox Width="200px" Text="Enter Vorname"></TextBox>
+            
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="57">
+            <TextBox Width="200px" Text="Enter Name"></TextBox>
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="80">
+            <TextBox Width="200px" Text="Enter Name zusatz"></TextBox>
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="103">
+            <TextBox Width="200px" Text="Enter Strassen Nr"></TextBox>
+
+        </StackPanel>
     </Grid>
 </Page>
