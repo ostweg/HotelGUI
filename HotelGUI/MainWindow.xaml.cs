@@ -41,7 +41,7 @@ namespace HotelGUI
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-
+            f2.Content = new Registration();
         }
     }
 }
