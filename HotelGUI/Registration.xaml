@@ -10,77 +10,135 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="2*"/>
+        <ColumnDefinition Width="1*"/>
+        <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0" Grid.Column="0">
             <Label Content="Anrede*"></Label>
-            
+
         </StackPanel>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,35,0,0" Grid.Column="0">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,34,0,0" Grid.Column="0">
             <Label Content="Vorname*"></Label>
-            
+
         </StackPanel>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,48,0,0" Grid.Column="0">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,57,0,0" Grid.Column="0">
             <Label Content="Name*"></Label>
 
         </StackPanel>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,61,0,0" Grid.Column="0">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,80,0,0" Grid.Column="0">
             <Label Content="Name zusatz"></Label>
 
         </StackPanel>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,90,0,0" Grid.Column="0">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,113,0,0" Grid.Column="0">
             <Label Content="Strassen Nr"></Label>
-            
+
         </StackPanel>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,103,0,0" Grid.Column="0">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,136,0,0" Grid.Column="0">
 
             <Label Content="Plz*"></Label>
         </StackPanel>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,116,0,0" Grid.Column="0">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,159,0,0" Grid.Column="0">
 
             <Label Content="Ort*"></Label>
         </StackPanel>
-        
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,145,0,0" Grid.Column="0">
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,192,0,0" Grid.Column="0">
             <Label Content="Telefon"></Label>
-            
-        </StackPanel>
-
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,158,0,0" Grid.Column="0">
-             <Label Content="Mobile"></Label>
 
         </StackPanel>
 
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,171,0,0" Grid.Column="0">
-          <Label Content="Email"></Label>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,215,0,0" Grid.Column="0">
+            <Label Content="Mobile"></Label>
 
         </StackPanel>
-       
-        
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,200,0,0" Grid.Column="0">
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,238,0,0" Grid.Column="0">
+            <Label Content="Email"></Label>
+
+        </StackPanel>
+
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,271,0,0" Grid.Column="0">
             <Label Content="Web"></Label>
 
         </StackPanel>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,213,0,0" Grid.Column="0">
-            <Label Content="Geburtsdatum"></Label>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,294,0,0" Grid.Column="0">
+            <Label Content="Geburtsdatum*"></Label>
 
         </StackPanel>
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,226,0,0" Grid.Column="0">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,317,0,0" Grid.Column="0">
             <Label Content="Pass Nr"></Label>
 
         </StackPanel>
-        
-        
-        
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,256,0,0" Grid.Column="0">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,350,0,0" Grid.Column="0">
             <Label Content="Nationalität"></Label>
         </StackPanel>
+
+
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0" Grid.Column="1">
             <Label Content="Herr"></Label>
             <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center"></RadioButton>
             <Label Content="Frau"></Label>
             <RadioButton VerticalAlignment="Center" HorizontalAlignment="Center"></RadioButton>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,34,0,0">
+            <TextBox Width="200px" Text="Enter Vorname"></TextBox>
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,57,0,0">
+            <TextBox Width="200px" Text="Enter Name"></TextBox>
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,80,0,0">
+            <TextBox Width="200px" Text="Enter Name zusatz"></TextBox>
+
+        </StackPanel>
+
+
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,113,0,0">
+            <TextBox Width="200px" Text="Enter Strassen Nr"/>
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,136,0,0">
+            <TextBox Width="200px" Text=" Enter Plz*"></TextBox>
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,159,0,0">
+            <TextBox Width="200px" Text="Enter Ort*"></TextBox>
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,192,0,0">
+            <TextBox Width="200px" Text="Enter Telefon"/>
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,215,0,0">
+            <TextBox Width="200px" Text="Enter Mobile"/>
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,238,0,0">
+            <TextBox Width="200px" Text="Enter Email"/>
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,271,0,0">
+            <TextBox Width="200px" Text="Enter Web"/>
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,294,0,0">
+            <TextBox Width="200px" Text="Enter Geburtsdatum*"/>
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,317,0,0">
+            <TextBox Width="200px" Text="Enter Pass Nr"/>
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,350,0,0">
+            <TextBox Width="200px" Text="Enter Nationalität"/>
+
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,393,0,0">
+            <Button Content="Submit" Width="200"></Button>
+
         </StackPanel>
     </Grid>
 </Page>
