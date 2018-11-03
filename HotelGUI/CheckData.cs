@@ -39,8 +39,7 @@ namespace HotelGUI
         }
         public void saveUserToDB(string anrede,string vorname,string name,string namezusatz,string strassennr, short plz, string ort,string telefon, string mobile, string email,string web, DateTime geburtsdatum, string passnr, long nationalität)
         {
-            if(anrede != "" && vorname !="" && name !="" && plz != 0 && ort != "" && email != "" && geburtsdatum != null)
-            {
+            
                 using(e1 = new M120Entities())
                 {
                     Kunde k1 = new Kunde
@@ -60,13 +59,17 @@ namespace HotelGUI
                         PassNr = passnr,
                         Nationalitaet = nationalität
 
+
                     };
+                    
+                    Menu2 m1 = new Menu2();
+                    m1.Show();
                     e1.Kundes.Add(k1);
                     e1.SaveChanges();
                 }
-
-            }
-               
+                
+           
+          
         }
    
     }

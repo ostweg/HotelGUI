@@ -71,7 +71,7 @@
 
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,350,0,0" Grid.Column="0">
-            <Label Content="Nationalität"></Label>
+            <Label Content="Nationalität (1-200)"></Label>
         </StackPanel>
 
 
@@ -82,54 +82,54 @@
             <RadioButton VerticalAlignment="Center" Name="r2" HorizontalAlignment="Center"></RadioButton>
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,34,0,0">
-            <TextBox Width="200px" Text="Enter Vorname" Name="tb1"></TextBox>
+            <TextBox Width="200px" Text="" Name="tb1"></TextBox>
 
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,57,0,0">
-            <TextBox Width="200px" Text="Enter Name" Name="tb2"></TextBox>
+            <TextBox Width="200px" Text="" Name="tb2"></TextBox>
 
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,80,0,0">
-            <TextBox Width="200px" Text="Enter Name zusatz" Name="tb3"></TextBox>
+            <TextBox Width="200px" Text="" Name="tb3"></TextBox>
 
         </StackPanel>
 
 
 
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,113,0,0">
-            <TextBox Width="200px" Text="Enter Strassen Nr" Name="tb4"/>
+            <TextBox Width="200px" Text="" Name="tb4"/>
 
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,136,0,0">
-            <TextBox Width="200px" Text=" 3000" Name="tb5"></TextBox>
+            <TextBox Width="200px" Text="1000" Name="tb5"></TextBox>
 
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,159,0,0">
-            <TextBox Width="200px" Text="Enter Ort*" Name="tb6"></TextBox>
+            <TextBox Width="200px" Text="" Name="tb6"></TextBox>
 
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,192,0,0">
-            <TextBox Width="200px" Text="Enter Telefon" Name="tb7"/>
+            <TextBox Width="200px" Text="" Name="tb7"/>
 
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,215,0,0">
-            <TextBox Width="200px" Text="Enter Mobile" Name="tb8"/>
+            <TextBox Width="200px" Text="" Name="tb8"/>
 
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,238,0,0">
-            <TextBox Width="200px" Text="Enter Email" Name="tb9"/>
+            <TextBox Width="200px" Text="" Name="tb9"/>
 
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,271,0,0">
-            <TextBox Width="200px" Text="Enter Web" Name="tb10"/>
+            <TextBox Width="200px" Text="" Name="tb10"/>
 
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,294,0,0">
-            <TextBox Width="200px" Text="01/11/1000" Name="tb11"/>
+            <TextBox Width="200px" Text="01/10/1000" Name="tb11"/>
 
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,317,0,0">
-            <TextBox Width="200px" Text="Enter Pass Nr" Name="tb12"/>
+            <TextBox Width="200px" Text="" Name="tb12"/>
 
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,350,0,0">
@@ -138,7 +138,7 @@
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,393,0,0">
             <Button Content="Submit" Width="200" Click="Button_Click"></Button>
-
+            <Label Name="hiddenl"></Label>
         </StackPanel>
     </Grid>
 </Page>
