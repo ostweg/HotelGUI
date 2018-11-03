@@ -20,7 +20,7 @@ namespace HotelGUI
     /// </summary>
     public partial class Login : Page
     {
-        CheckData d1;
+        CheckData d1 = new CheckData();
         public Login()
         {
             InitializeComponent();
@@ -38,7 +38,10 @@ namespace HotelGUI
             {
                
                 if (d1.isUserInDB(uncheckedUSN, uncheckedPW) == true){
-                   HiddenMessage.Content = "accepted";
+                    label1.Foreground = new SolidColorBrush(Colors.Green);
+                    lolxd.Foreground = new SolidColorBrush(Colors.Green);
+                    HiddenMessage.Foreground = new SolidColorBrush(Colors.Green);
+                    HiddenMessage.Content = "accepted";
                 }
                 else
                  {
@@ -47,7 +50,10 @@ namespace HotelGUI
             }
             else
             {
-                HiddenMessage.Content ="false";
+                label1.Foreground = new SolidColorBrush(Colors.Red);
+                lolxd.Foreground = new SolidColorBrush(Colors.Red);
+                HiddenMessage.Foreground = new SolidColorBrush(Colors.Red);
+                HiddenMessage.Content = " Username or Password cant be empty";
             }
             
            

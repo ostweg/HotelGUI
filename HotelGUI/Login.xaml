@@ -15,12 +15,12 @@
         </StackPanel>
       
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,170,0,0" >
-            <Label Content="Username" Width="150"></Label>
+            <Label  Name="label1" Content="Username" Width="150"></Label>
             <TextBox Text="Enter Username" Width="200" Name="lt1"></TextBox>
             <Image Source="23228.png" Stretch="Fill" Height="20"  Margin="10,0,0,0"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,200,0,0" >
-            <Label Content="Password" Width="150"></Label>
+            <Label Name ="lolxd" Content="Password" Width="150"></Label>
             <TextBox Text="Enter Password"  Width="200"  Name="lt2"></TextBox>
             <Image Source="Lock-512.png" Stretch="Fill" Height="20" Margin="10,0,0,0"/>
         </StackPanel>
