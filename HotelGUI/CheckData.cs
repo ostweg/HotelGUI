@@ -12,6 +12,7 @@ namespace HotelGUI
         /// Func that returns true or false based of params.
         /// </summary>
         M120Entities e1;
+        Menu2 m1;
         GUIUSER g1 = new GUIUSER();
         GUIUSER g2 = new GUIUSER();
         
@@ -25,19 +26,23 @@ namespace HotelGUI
 
                 if (g1.Gu_Benutzername == usn && g2.GU_Password == pw)
                 {
+                    m1 = new Menu2();
+                    m1.Show();
+                   
                     return true;
                 }
                 else
                 {
                     return false;
                 }
-                           
-
+               
+               
+                
             }
 
 
         }
-        public void saveUserToDB(string anrede,string vorname,string name,string namezusatz,string strassennr, short plz, string ort,string telefon, string mobile, string email,string web, DateTime geburtsdatum, string passnr, long nationalität)
+        public void saveUserToDB(string anrede,string vorname,string name,string namezusatz,string strassennr, short plz, string ort,string telefon, string mobile, string email,string web, DateTime geburtsdatum, string passnr, long nationalität, string usn, string pw)
         {
             
                 using(e1 = new M120Entities())
@@ -61,9 +66,15 @@ namespace HotelGUI
 
 
                     };
-                    
-                    Menu2 m1 = new Menu2();
+                    GUIUSER g1 = new GUIUSER
+                    {
+                        Gu_Benutzername = usn,
+                        GU_Password = pw,
+                    };
+
+                     m1 = new Menu2();
                     m1.Show();
+                    e1.GUIUSERs.Add(g1);
                     e1.Kundes.Add(k1);
                     e1.SaveChanges();
                 }
