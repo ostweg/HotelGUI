@@ -12,8 +12,8 @@ namespace HotelGUI
         /// Func that returns true or false based of params.
         /// </summary>
         M120Entities e1;
-        GUIUSER g1;
-        GUIUSER g2;
+        GUIUSER g1 = new GUIUSER();
+        GUIUSER g2 = new GUIUSER();
         
         public bool isUserInDB(string usn, string pw) {
            
@@ -35,6 +35,39 @@ namespace HotelGUI
 
             }
 
+
         }
+        public void saveUserToDB(string anrede,string vorname,string name,string namezusatz,string strassennr, short plz, string ort,string telefon, string mobile, string email,string web, DateTime geburtsdatum, string passnr, long nationalität)
+        {
+            if(anrede != "" && vorname !="" && name !="" && plz != 0 && ort != "" && email != "" && geburtsdatum != null)
+            {
+                using(e1 = new M120Entities())
+                {
+                    Kunde k1 = new Kunde
+                    {
+                        Anrede = anrede,
+                        Vorname = vorname,
+                        Name = name,
+                        NameZusatz = namezusatz,
+                        StrasseNr = strassennr,
+                        PLZ = plz,
+                        Ort = ort,
+                        Telefon = telefon,
+                        Mobile = mobile,
+                        Email = email,
+                        Web = web,
+                        Geburtsdatum = geburtsdatum,
+                        PassNr = passnr,
+                        Nationalitaet = nationalität
+
+                    };
+                    e1.Kundes.Add(k1);
+                    e1.SaveChanges();
+                }
+
+            }
+               
+        }
+   
     }
 }
