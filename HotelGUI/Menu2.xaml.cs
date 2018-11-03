@@ -34,12 +34,12 @@ namespace HotelGUI
 
         private void bClick(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void b1Click(object sender, RoutedEventArgs e)
         {
-
+            c1.Content = new Profile();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

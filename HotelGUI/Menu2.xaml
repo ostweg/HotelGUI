@@ -36,7 +36,7 @@
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
-            <Button Width="100" Height="70" Content="home" BorderThickness="0" FontSize="25" Click="bClick">
+            <Button Width="100" Height="70" Content="Home" BorderThickness="0" FontSize="25" Click="bClick">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="white"/>
@@ -58,7 +58,7 @@
                 </Button.Style>
             </Button>
 
-            <Button Width="100" Height="70" Content="banned" BorderThickness="0" FontSize="25" Click="b1Click">
+            <Button Width="100" Height="70" Content="Profile" BorderThickness="0" FontSize="25" Click="b1Click">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="white"/>
@@ -79,7 +79,7 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Width="100" Height="70" Content="lol" BorderThickness="0" FontSize="25" Click="Button_Click" Margin="0,0,20,0">
+            <Button Width="100" Height="70" Content="Hotels" BorderThickness="0" FontSize="25" Click="Button_Click" Margin="0,0,20,0">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="white"/>
