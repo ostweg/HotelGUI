@@ -49,6 +49,9 @@ namespace HotelGUI
             {
                 HiddenMessage.Content ="false";
             }
+            
+           
+            
         }
     }
 }

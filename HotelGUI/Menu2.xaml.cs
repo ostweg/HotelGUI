@@ -26,7 +26,10 @@ namespace HotelGUI
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            c1.Content = new Page1();
+            if (MessageBox.Show("Do you really want to log out?", "Salü zeme", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                System.Environment.Exit(0);
+            }
         }
 
         private void bClick(object sender, RoutedEventArgs e)
