@@ -44,7 +44,7 @@ namespace HotelGUI
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            c1.Content = new Hotels();
         }
     }
 }

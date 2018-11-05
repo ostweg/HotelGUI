@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Diagnostics.Contracts;
+using System.IO;
+using System.Drawing;
 
 namespace HotelGUI
 {
@@ -15,7 +21,35 @@ namespace HotelGUI
         Menu2 m1;
         GUIUSER g1 = new GUIUSER();
         GUIUSER g2 = new GUIUSER();
-        
+        public byte[] Content { get; set; }
+
+
+        //Saves Image to DB
+        public byte[] SaveImageToByte(System.Drawing.Image image)
+        {
+            MemoryStream m1 = new MemoryStream();
+            image.Save(m1, System.Drawing.Imaging.ImageFormat.Gif);
+            saveImageToDb(m1.ToArray());
+            return m1.ToArray();
+        }
+        //returns Image from DB
+        public Image bytearray()
+        {
+            MemoryStream m2 = new MemoryStream();
+            Image returnImage = Image.FromStream(m2);
+            return returnImage;
+        }
+       public void saveImageToDb(byte[] img)
+        {
+            using(e1 = new M120Entities()){
+
+                HotelBild b1 = new HotelBild
+                {
+                    Bild = img
+                };
+
+            }
+        }
         public bool isUserInDB(string usn, string pw) {
            
             using(e1 = new M120Entities())

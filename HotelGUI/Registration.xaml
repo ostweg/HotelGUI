@@ -82,7 +82,7 @@
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0" Grid.Column="1">
             <Label Content="Herr"></Label>
-            <RadioButton HorizontalAlignment="Center" Name="r1" VerticalAlignment="Center"></RadioButton>
+            <RadioButton HorizontalAlignment="Center" Name="r1" VerticalAlignment="Center" IsChecked="True"></RadioButton>
             <Label Content="Frau"></Label>
             <RadioButton VerticalAlignment="Center" Name="r2" HorizontalAlignment="Center"></RadioButton>
         </StackPanel>
