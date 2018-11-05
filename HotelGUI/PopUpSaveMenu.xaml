@@ -12,21 +12,22 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="70px"/>
+            <RowDefinition Height="88px"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Label Content="Image description" Width="200px"></Label>
+            <Label Content="Image description" Width="200px" FontSize="19"></Label>
             <TextBox Name="tbdesc" Text="" Margin="0,4" Width="200px" ></TextBox>
-            <Button Content="Browse" Margin="0,4,0,0" Width="200px" Click="openDialog"></Button>
+            <Button Content="Browse" Margin="0,5,0,0" Width="200px" Click="openDialog"></Button>
             
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="TOp" Orientation="Horizontal" Margin="0,20">
-            <Button Content="Save" Width="100"></Button>
+            <Button Content="Save" Width="100" Click="saveImage"></Button>
             <Button Content="Clear" Width="100" Click="Button_Click"></Button>
         </StackPanel>
-        <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Label Content="Image Preview"></Label>
+        <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Vertical">
+            <Label Content="Image Preview" FontSize="19"></Label>
+            <Label Name="labelhidden" Margin="0,4,0,0"></Label>
         </StackPanel>
         <Image  Grid.Row="1" Grid.Column="1" Margin="20"  Source="noimg.png" Stretch="Fill" Name="img1"></Image>
     </Grid>

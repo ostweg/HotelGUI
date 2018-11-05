@@ -25,11 +25,11 @@ namespace HotelGUI
 
 
         //Saves Image to DB
-        public byte[] SaveImageToByte(System.Drawing.Image image)
+        public byte[] SaveImageToByte(Image image, string desc)
         {
             MemoryStream m1 = new MemoryStream();
             image.Save(m1, System.Drawing.Imaging.ImageFormat.Gif);
-            saveImageToDb(m1.ToArray());
+            saveImageToDb(m1.ToArray(), desc);
             return m1.ToArray();
         }
         //returns Image from DB
@@ -39,12 +39,13 @@ namespace HotelGUI
             Image returnImage = Image.FromStream(m2);
             return returnImage;
         }
-       public void saveImageToDb(byte[] img)
+       public void saveImageToDb(byte[] img, string description)
         {
             using(e1 = new M120Entities()){
 
                 HotelBild b1 = new HotelBild
                 {
+                    Beschreibung = description,
                     Bild = img
                 };
 
@@ -58,7 +59,8 @@ namespace HotelGUI
                 g1 = e1.GUIUSERs.FirstOrDefault(r => r.Gu_Benutzername == usn );
                 g2 = e1.GUIUSERs.FirstOrDefault(p => p.GU_Password == pw);
 
-                if (g1.Gu_Benutzername == usn && g2.GU_Password == pw)
+             
+                if (g1.Gu_Benutzername == usn && g2.GU_Password == pw /*&& g1 != null && g2 != null*/)
                 {
                     m1 = new Menu2();
                     m1.Show();
