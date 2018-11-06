@@ -22,15 +22,36 @@ namespace HotelGUI
     public partial class PopUpSaveMenu : Window
     {
         private string filePath;
-       
+        public string hName;
+        public string hOrt;
+        public Land hLand;
+        public int hSterne;
+        public string hManager;
+        public int hAnzahlZimmer;
+        public int hTagesPreis;
+        public string hTelefon;
+        public string hEmail;
+        public string hWeb;
+
        
         CheckData checkData = new CheckData();
         
         public PopUpSaveMenu()
         {
+          
             InitializeComponent();
+            setListDrop();
         }
 
+        public void setListDrop()
+        {
+            M120Entities m120Entities = new M120Entities();
+            List<Land> l1 = m120Entities.Lands.ToList();
+            foreach (Land land in l1)
+            {
+                pu3.Items.Add(land.Name);
+            }
+        }
         private void openDialog(object sender, RoutedEventArgs e)
         {
             OpenFileDialog o1 = new OpenFileDialog();
@@ -63,7 +84,7 @@ namespace HotelGUI
             {
                 if(filePath != "")
                 {
-                    //checkData.SaveImageToByte(new Image(filePath),tbdesc.Text);
+                    checkData.SaveImageToByte(new Bitmap(filePath),tbdesc.Text);
                 }
                 else
                 {
@@ -79,5 +100,14 @@ namespace HotelGUI
             }
             
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            hName = pu1.Text;
+            hOrt = pu2.Text;
+            hLand = new Land();
+            
+        }
+        
     }
 }

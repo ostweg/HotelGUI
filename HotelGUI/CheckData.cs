@@ -21,7 +21,7 @@ namespace HotelGUI
         Menu2 m1;
         GUIUSER g1 = new GUIUSER();
         GUIUSER g2 = new GUIUSER();
-        public byte[] Content { get; set; }
+       // public byte[] Content { get; set; }
 
 
         //Saves Image to DB
@@ -33,12 +33,12 @@ namespace HotelGUI
             return m1.ToArray();
         }
         //returns Image from DB
-        public Image bytearray()
+       /* public Image bytearray()
         {
             MemoryStream m2 = new MemoryStream();
             Image returnImage = Image.FromStream(m2);
             return returnImage;
-        }
+        }*/
        public void saveImageToDb(byte[] img, string description)
         {
             using(e1 = new M120Entities()){
@@ -48,14 +48,15 @@ namespace HotelGUI
                     Beschreibung = description,
                     Bild = img
                 };
-
+                e1.HotelBilds.Add(b1);
+                e1.SaveChanges();
             }
         }
         public bool isUserInDB(string usn, string pw) {
            
             using(e1 = new M120Entities())
             {
-                // TODO: Fix null ref on g1, g2 instances
+                
                 g1 = e1.GUIUSERs.FirstOrDefault(r => r.Gu_Benutzername == usn );
                 g2 = e1.GUIUSERs.FirstOrDefault(p => p.GU_Password == pw);
 

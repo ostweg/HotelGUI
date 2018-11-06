@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HotelGUI"
         mc:Ignorable="d"
-        Title="PopUpSaveMenu" Height="450" Width="800">
+        Title="PopUpSaveMenu" Height="460" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -15,20 +15,80 @@
             <RowDefinition Height="88px"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top">
+        <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Label Content="Image description" Width="200px" FontSize="19"></Label>
             <TextBox Name="tbdesc" Text="" Margin="0,4" Width="200px" ></TextBox>
             <Button Content="Browse" Margin="0,5,0,0" Width="200px" Click="openDialog"></Button>
             
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="TOp" Orientation="Horizontal" Margin="0,20">
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="TOp" Orientation="Horizontal" Margin="0,50,0,0">
             <Button Content="Save" Width="100" Click="saveImage"></Button>
             <Button Content="Clear" Width="100" Click="Button_Click"></Button>
         </StackPanel>
-        <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Vertical">
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Vertical">
             <Label Content="Image Preview" FontSize="19"></Label>
-            <Label Name="labelhidden" Margin="0,4,0,0"></Label>
+            
         </StackPanel>
-        <Image  Grid.Row="1" Grid.Column="1" Margin="20"  Source="noimg.png" Stretch="Fill" Name="img1"></Image>
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <Label Name="labelhidden" Width="300" Margin="0,0,0,10"></Label>
+        </StackPanel>
+        <StackPanel Grid.RowSpan="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,6,0,0">
+            <Label Content="Name" Name="ll1" Width="100" ></Label>
+            <TextBox Width="100" Name="pu1"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.RowSpan="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,7,0,0">
+            <Label Content="Ort" Name="ll2" Width="100" Margin="0,25,0,0"></Label>
+            <TextBox Width="100" Name="pu2" Margin="0,25,0,0"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,0,0,0">
+            <Label Content="Land" Name="ll3" Width="100" ></Label>
+            <ComboBox Width="100" Name="pu3" Text="Land auswählen"></ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,25,0,0">
+            <Label Content="Kurzname" Name="ll33" Width="100" ></Label>
+            <TextBox Width="100" Name="pu33" ></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,50,0,0">
+            <Label Content="Flagge" Name="ll34" Width="100" ></Label>
+            <TextBox Width="100" Name="pu34" ></TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.RowSpan="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,200,0,0">
+            <Label Content="Sterne" Name="ll4" Width="100" ></Label>
+            <TextBox Width="100" Name="pu4" ></TextBox>
+        </StackPanel>
+        <StackPanel Grid.RowSpan="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal"  Margin="0,225,0,0">
+            <Label Content="Manager" Name="ll5" Width="100"></Label>
+            <TextBox Width="100" Name="pu5"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.RowSpan="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,245,0,0">
+            <Label Content="AnzahlZimmer" Name="ll6" Width="100" ></Label>
+            <TextBox Width="100" Name="pu6" ></TextBox>
+        </StackPanel>
+        <StackPanel Grid.RowSpan="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal"  Margin="0,269,0,0">
+            <Label Content="TagesPreis" Name="ll7" Width="100"></Label>
+            <TextBox Width="100" Name="pu7"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.RowSpan="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,315,0,0">
+            <Label Content="Telefon" Name="ll8" Width="100" ></Label>
+            <TextBox Width="100" Name="pu8"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.RowSpan="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,340,0,0">
+            <Label Content="Email" Name="ll9" Width="100" ></Label>
+            <TextBox Width="100" Name="pu9" ></TextBox>
+        </StackPanel>
+        <StackPanel Grid.RowSpan="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,364,0,0">
+            <Label Content="Web" Name="l20" Width="100" ></Label>
+            <TextBox Width="100" Name="pu10" ></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,318,0,0"  Orientation="Horizontal">
+            <Label Width="100"></Label>
+            <Button Width="100" Content="Submit" Click="Button_Click_1"></Button>
+            
+        </StackPanel>
+
+
+
+        <Image  Grid.Row="1" Grid.Column="1" Margin="70"  Source="noimg.png" Stretch="Fill" Name="img1"></Image>
     </Grid>
 </Window>
