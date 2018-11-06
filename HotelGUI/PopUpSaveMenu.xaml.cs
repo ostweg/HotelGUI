@@ -24,16 +24,18 @@ namespace HotelGUI
         private string filePath;
         public string hName;
         public string hOrt;
-        public Land hLand;
-        public int hSterne;
+        public long hLand;
+        public byte hSterne;
         public string hManager;
-        public int hAnzahlZimmer;
+        public short hAnzahlZimmer;
         public int hTagesPreis;
         public string hTelefon;
         public string hEmail;
         public string hWeb;
+        public static M120Entities m120Entities = new M120Entities();
+        List<Land> l1 = m120Entities.Lands.ToList();
 
-       
+
         CheckData checkData = new CheckData();
         
         public PopUpSaveMenu()
@@ -45,8 +47,8 @@ namespace HotelGUI
 
         public void setListDrop()
         {
-            M120Entities m120Entities = new M120Entities();
-            List<Land> l1 = m120Entities.Lands.ToList();
+           
+            
             foreach (Land land in l1)
             {
                 pu3.Items.Add(land.Name);
@@ -84,7 +86,7 @@ namespace HotelGUI
             {
                 if(filePath != "")
                 {
-                    checkData.SaveImageToByte(new Bitmap(filePath),tbdesc.Text);
+                    checkData.SaveImageToByte(new Bitmap(filePath),tbdesc.Text,pu1.Text);
                 }
                 else
                 {
@@ -103,9 +105,26 @@ namespace HotelGUI
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            hName = pu1.Text;
-            hOrt = pu2.Text;
-            hLand = new Land();
+           
+
+            if(pu1.Text != "" && pu2.Text != "" && pu3.Text != "" && pu4.Text != "" && pu5.Text != "" && pu6.Text != null && pu7.Text != null && pu8.Text != "" && pu9.Text !="" && pu10.Text != "")
+            {
+                hName = pu1.Text;
+                hOrt = pu2.Text;
+                hLand = l1.Find(x => x.Name == pu3.SelectedItem.ToString()).LandID;
+                hSterne = Convert.ToByte(pu4.Text);
+                hManager = pu5.Text;
+                hAnzahlZimmer = Convert.ToInt16(pu6.Text);
+                hTagesPreis = Convert.ToInt16(pu7.Text);
+                hTelefon = pu8.Text;
+                hEmail = pu9.Text;
+                hWeb = pu10.Text;
+                checkData.saveHotelToDB(hName,hOrt,hLand,hSterne,hManager,hAnzahlZimmer,hTagesPreis,hTelefon,hEmail,hWeb);
+
+            }
+
+
+
             
         }
         

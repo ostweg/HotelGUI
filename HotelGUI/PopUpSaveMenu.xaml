@@ -46,7 +46,7 @@
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,25,0,0">
             <Label Content="Kurzname" Name="ll33" Width="100" ></Label>
-            <TextBox Width="100" Name="pu33" ></TextBox>
+            <TextBox Width="100" Name="pu33" Text="Nichts einzugeben"></TextBox>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,50,0,0">
             <Label Content="Flagge" Name="ll34" Width="100" ></Label>
