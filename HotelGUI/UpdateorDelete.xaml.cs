@@ -69,5 +69,73 @@ namespace HotelGUI
                 }
             }
         }
+        public string updatedMessage()
+        {
+            hiddenLabel2.Foreground = new SolidColorBrush(Colors.ForestGreen);
+            return "Values have been updated";
+        }
+        private void updateValuesOnClick(object sender, RoutedEventArgs e)
+        {
+            using(e1 = new M120Entities())
+            {
+                k1 = e1.Kundes.FirstOrDefault(c => c.Name == tbLoad.Text);
+                try
+                {
+
+
+                    if (k1.Anrede == "Frau" && l2.IsChecked == false)
+                    {
+                        k1.Anrede = "Mann";
+                        hiddenLabel2.Content = updatedMessage();
+                    }
+                    else if (k1.Anrede == "Mann" && l1.IsChecked == false)
+                    {
+                        k1.Anrede = "Frau";
+                        hiddenLabel2.Content = updatedMessage();
+                    }
+                    else if (tbName.Text != k1.Name)
+                    {
+                        k1.Name = tbName.Text;
+                        hiddenLabel2.Content = updatedMessage();
+                    }
+                    else if (tbVorname.Text != k1.Vorname)
+                    {
+                        k1.Vorname = tbVorname.Text;
+                        hiddenLabel2.Content = updatedMessage();
+                    }
+                    else if (tbPlz.Text != k1.PLZ.ToString())
+                    {
+                        k1.PLZ = Convert.ToInt16(tbPlz.Text);
+                        hiddenLabel2.Content = updatedMessage();
+                    }
+                    else if (tbOrt.Text != k1.Ort)
+                    {
+                        k1.Ort = tbOrt.Text;
+                        hiddenLabel2.Content = updatedMessage();
+                    }
+                    else if (tbEmail.Text != k1.Email)
+                    {
+                        k1.Email = tbEmail.Text;
+                        hiddenLabel2.Content = updatedMessage();
+                    }
+                    else if (DateTime.Parse(tbBirthdate.SelectedDate.ToString()) != k1.Geburtsdatum)
+                    {
+                        k1.Geburtsdatum = DateTime.Parse(tbBirthdate.SelectedDate.ToString());
+                        hiddenLabel2.Content = updatedMessage();
+                    }
+                    else
+                    {
+                        hiddenLabel2.Content = "Nothing Updated";
+                    }
+                    e1.SaveChanges();
+                }
+                catch(NullReferenceException x)
+                {
+                    MessageBox.Show(x.Message);
+                }
+                
+
+            }
+        }
     }
 }
