@@ -39,7 +39,7 @@ namespace HotelGUI
             string password = tb15.Text;
             
             //DateTime uncheckedGeburtsdatum = Convert.ToDateTime(tb11.Text);
-            if (r1.IsChecked == true && r2.IsChecked != false)
+            if (r1.IsChecked == true && r2.IsChecked != true)
             {
                 uncheckedAnrede = "Herr";
             }

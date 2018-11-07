@@ -35,6 +35,7 @@ namespace HotelGUI
             //https://stackoverflow.com/questions/41998142/converting-system-drawing-image-to-system-windows-media-imagesource-with-no-resu
             foreach (HotelBild bild in l2)
             {
+
                ch1.bytearray(bild.Bild);
             }
         }

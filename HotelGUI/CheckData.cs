@@ -114,7 +114,11 @@ namespace HotelGUI
             
                 using(e1 = new M120Entities())
                 {
-                    Kunde k1 = new Kunde
+               
+
+
+                //Hotel h2 = e1.Hotels.FirstOrDefault(c => c.Name == hotelName);
+                Kunde k1 = new Kunde
                     {
                         Anrede = anrede,
                         Vorname = vorname,
