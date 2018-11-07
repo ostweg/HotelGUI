@@ -37,8 +37,8 @@ namespace HotelGUI
             string uncheckedEmail = tb9.Text;
             string username = tb14.Text;
             string password = tb15.Text;
-
-            DateTime uncheckedGeburtsdatum = Convert.ToDateTime(tb11.Text);
+            
+            //DateTime uncheckedGeburtsdatum = Convert.ToDateTime(tb11.Text);
             if (r1.IsChecked == true && r2.IsChecked != false)
             {
                 uncheckedAnrede = "Herr";
@@ -47,9 +47,12 @@ namespace HotelGUI
             {
                 uncheckedAnrede = "Frau";
             }
-            if (uncheckedAnrede != null && uncheckedVorname != "" && uncheckedVorname != "" && uncheckedPlz > 0 && uncheckedOrt != "" && uncheckedEmail != "" && uncheckedGeburtsdatum != null && username != "" && password != "")
+            if (uncheckedAnrede != null && uncheckedVorname != "" && uncheckedVorname != "" && uncheckedPlz > 0 && uncheckedOrt != "" && uncheckedEmail != ""  && username != "" && password != "")
             {
 
+                
+                DateTime selectedDate = (DateTime)dp1.SelectedDate;
+                
                 string uncheckedNameZ = tb3.Text;
                 string uncheckedStrassenNr = tb4.Text;
                 string uncheckedTelefon = tb7.Text;
@@ -60,7 +63,7 @@ namespace HotelGUI
                 
 
                 d2.saveUserToDB(uncheckedAnrede, uncheckedVorname, uncheckedName, uncheckedNameZ, uncheckedStrassenNr, uncheckedPlz, uncheckedOrt,
-                    uncheckedTelefon, uncheckedMobile, uncheckedEmail, uncheckedWeb, uncheckedGeburtsdatum, uncheckedPassNr, uncheckedNationalität,username,password);
+                    uncheckedTelefon, uncheckedMobile, uncheckedEmail, uncheckedWeb, selectedDate, uncheckedPassNr, uncheckedNationalität,username,password);
 
                 hiddenl.Foreground = new SolidColorBrush(Colors.ForestGreen);
                 hiddenl.Content = "Data Saved";

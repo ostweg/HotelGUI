@@ -130,7 +130,8 @@
 
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,294,0,0">
-            <TextBox Width="200px" Text="01/10/1000" Name="tb11"/>
+            
+            <DatePicker Width="200px" Name="dp1"></DatePicker>
 
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,317,0,0">

@@ -24,5 +24,6 @@
             <Label Content="Interessted in having you hotel displayed?"></Label>
             <Button Content="Click here" Width="100" Click="gotosavemenu"></Button>
         </StackPanel>
+        <Image Name="img2"  Grid.Row="1" ></Image>
     </Grid>
 </Page>

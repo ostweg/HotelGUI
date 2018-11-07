@@ -31,14 +31,15 @@ namespace HotelGUI
             image.Save(m1, System.Drawing.Imaging.ImageFormat.Gif);
             saveImageToDb(m1.ToArray(), desc, hotelN);
             return m1.ToArray();
+             
         }
         //returns Image from DB
-       /* public Image bytearray()
+        public Image bytearray(byte[] byteArray)
         {
-            MemoryStream m2 = new MemoryStream();
+            MemoryStream m2 = new MemoryStream(byteArray);
             Image returnImage = Image.FromStream(m2);
             return returnImage;
-        }*/
+        }
        public void saveImageToDb(byte[] img, string description, string hotelName)
         {
             using(e1 = new M120Entities()){
