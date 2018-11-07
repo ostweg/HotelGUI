@@ -21,6 +21,8 @@ namespace HotelGUI
     public partial class Registration : Page
     {
         CheckData d2 = new CheckData();
+        UpdateorDelete up2 = new UpdateorDelete();
+        
         public Registration()
         {
             InitializeComponent();
@@ -37,6 +39,7 @@ namespace HotelGUI
             string uncheckedEmail = tb9.Text;
             string username = tb14.Text;
             string password = tb15.Text;
+
             
             //DateTime uncheckedGeburtsdatum = Convert.ToDateTime(tb11.Text);
             if (r1.IsChecked == true && r2.IsChecked != true)
@@ -64,7 +67,7 @@ namespace HotelGUI
 
                 d2.saveUserToDB(uncheckedAnrede, uncheckedVorname, uncheckedName, uncheckedNameZ, uncheckedStrassenNr, uncheckedPlz, uncheckedOrt,
                     uncheckedTelefon, uncheckedMobile, uncheckedEmail, uncheckedWeb, selectedDate, uncheckedPassNr, uncheckedNationalität,username,password);
-
+                
                 hiddenl.Foreground = new SolidColorBrush(Colors.ForestGreen);
                 hiddenl.Content = "Data Saved";
                 

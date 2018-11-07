@@ -58,6 +58,6 @@
                 </Button.Style>
             </Button>
         </StackPanel>
-        <Frame Grid.Row="1" Name="c3"></Frame>
+        <Frame Grid.Row="1" Name="c3" ></Frame>
     </Grid>
 </Page>

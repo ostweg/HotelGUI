@@ -7,8 +7,57 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="UpdateorDelete">
-
-    <Grid>
+    
+    <Grid Loaded="Grid_Loaded">
         
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Content="Update/Delete" FontSize="25" HorizontalAlignment="Center"></Label>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Orientation="Horizontal">
+            <Label Width="200"  FontSize ="15" Content="What was your name again?" ></Label>
+            <TextBox Width="200" Name="tbLoad"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" Orientation="Horizontal">
+            <Label Name="hiddenLabel" Width="200"></Label>
+            <Button Width="200" Content="Load" Click="Button_Click"></Button>
+        </StackPanel>
+        <StackPanel Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="center" Orientation="Horizontal" Margin="0,92,0,0">
+            <Label Width="200" Content="Anrede*" ></Label>
+            <Label Content="Herr" Width="50"></Label>
+            <RadioButton Width="50" Name="l1"></RadioButton>
+            <Label Content="Frau" Width="50"></Label>
+            <RadioButton Width="50" Name="l2"></RadioButton>
+        </StackPanel>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="top" Orientation="Horizontal"  Margin="0,117,0,0">
+            <Label Content="Name" Width="200"></Label>
+            <TextBox Width="200" Name="tbName"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="top" Orientation="Horizontal"  Margin="0,144,0,0">
+            <Label Content="Vorname" Width="200"></Label>
+            <TextBox Width="200" Name="tbVorname"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="top" Orientation="Horizontal"  Margin="0,171,0,0">
+            <Label Content="Plz" Width="200"></Label>
+            <TextBox Width="200" Name="tbPlz"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="top" Orientation="Horizontal"  Margin="0,197,0,0">
+            <Label Content="Ort" Width="200"></Label>
+            <TextBox Width="200" Name="tbOrt"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="top" Orientation="Horizontal"  Margin="0,224,0,0">
+            <Label Content="Email" Width="200"></Label>
+            <TextBox Width="200" Name="tbEmail"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="top" Orientation="Horizontal"  Margin="0,250,0,0">
+            <Label Content="Birthdate" Width="200"></Label>
+            <DatePicker Width="200" Name="tbBirthdate"></DatePicker>
+        </StackPanel>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="top" Orientation="Horizontal"  Margin="0,280,0,0">
+            <Label Width="200"></Label>
+            <Button Width="100" Content="Update"></Button>
+            <Button Width="100" Content="Delete"></Button>
+        </StackPanel>
     </Grid>
 </Page>

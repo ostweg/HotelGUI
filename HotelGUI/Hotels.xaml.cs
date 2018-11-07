@@ -36,7 +36,7 @@ namespace HotelGUI
             foreach (HotelBild bild in l2)
             {
 
-               ch1.bytearray(bild.Bild);
+              this.frame1.Content = bild.Beschreibung;
             }
         }
         private void gotosavemenu(object sender, RoutedEventArgs e)
@@ -44,6 +44,11 @@ namespace HotelGUI
             PopUpSaveMenu popupSave = new PopUpSaveMenu();
             popupSave.Show();
             
+        }
+
+        private void frame1_Loaded(object sender, RoutedEventArgs e)
+        {
+            frame1.Content = new ShowHotels();
         }
     }
 }

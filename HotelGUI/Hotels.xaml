@@ -24,10 +24,9 @@
             <Label Content="Interessted in having you hotel displayed?"></Label>
             <Button Content="Click here" Width="100" Click="gotosavemenu"></Button>
         </StackPanel>
-        
-        <DataGrid Grid.Row="1"  Grid.RowSpan="3" Grid.ColumnSpan="2" AutoGenerateColumns="True" ></DataGrid>
-        <StackPanel Grid.Row="1" Grid.Column="3">
-            <Button Content="Load Content"></Button>
-        </StackPanel>
+
+        <Frame Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="3" Name="frame1" Loaded="frame1_Loaded">
+            
+        </Frame>
     </Grid>
 </Page>

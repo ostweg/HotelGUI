@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,26 +13,24 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
 
 namespace HotelGUI
 {
     /// <summary>
-    /// Interaktionslogik für Profile.xaml
+    /// Interaktionslogik für ShowHotels.xaml
     /// </summary>
-    public partial class Profile : Page
+    public partial class ShowHotels : UserControl
     {
+        public ObservableCollection<HotelBild> Pics;
+
+        public HotelBild Description { get; set; }
         
+
         
-        public Profile()
+        public ShowHotels()
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            c3.Content = new UpdateorDelete();
-        }
-
-      
     }
 }

@@ -21,6 +21,7 @@ namespace HotelGUI
         Menu2 m1;
         GUIUSER g1 = new GUIUSER();
         GUIUSER g2 = new GUIUSER();
+        Kunde k1 = new Kunde();
        // public byte[] Content { get; set; }
 
 
@@ -33,6 +34,7 @@ namespace HotelGUI
             return m1.ToArray();
              
         }
+        
         //returns Image from DB
         public Image bytearray(byte[] byteArray)
         {
@@ -117,7 +119,7 @@ namespace HotelGUI
                
 
 
-                //Hotel h2 = e1.Hotels.FirstOrDefault(c => c.Name == hotelName);
+                
                 Kunde k1 = new Kunde
                     {
                         Anrede = anrede,
@@ -153,6 +155,15 @@ namespace HotelGUI
            
           
         }
-   
+        
+        public void updateUser(string name)
+        {
+
+        }
+        public void deleteUser(string name)
+        {
+
+        }
+
     }
 }
