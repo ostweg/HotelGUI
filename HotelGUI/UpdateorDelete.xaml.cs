@@ -125,6 +125,7 @@ namespace HotelGUI
                     }
                     else
                     {
+                        hiddenLabel2.Foreground = new SolidColorBrush(Colors.Yellow);
                         hiddenLabel2.Content = "Nothing Updated";
                     }
                     e1.SaveChanges();
@@ -135,6 +136,18 @@ namespace HotelGUI
                 }
                 
 
+            }
+        }
+
+        private void deleteValuesOnClick(object sender, RoutedEventArgs e)
+        {
+            using(e1 = new M120Entities())
+            {
+                k1 = e1.Kundes.FirstOrDefault(c => c.Name == tbLoad.Text);
+                e1.Kundes.Remove(k1);
+                e1.SaveChanges();
+                hiddenLabel2.Foreground = new SolidColorBrush(Colors.ForestGreen);
+                hiddenLabel2.Content = "Successfully deleted";
             }
         }
     }

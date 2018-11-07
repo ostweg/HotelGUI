@@ -57,7 +57,7 @@
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="top" Orientation="Horizontal"  Margin="0,280,0,0">
             <Label Name="hiddenLabel2" Width="200"></Label>
             <Button Width="100" Content="Update" Click="updateValuesOnClick"></Button>
-            <Button Width="100" Content="Delete"></Button>
+            <Button Width="100" Content="Delete" Click="deleteValuesOnClick"></Button>
         </StackPanel>
     </Grid>
 </Page>

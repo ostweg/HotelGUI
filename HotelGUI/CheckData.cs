@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Diagnostics.Contracts;
 using System.IO;
 using System.Drawing;
+using System.Windows;
 
 namespace HotelGUI
 {
@@ -92,20 +93,26 @@ namespace HotelGUI
                 g1 = e1.GUIUSERs.FirstOrDefault(r => r.Gu_Benutzername == usn );
                 g2 = e1.GUIUSERs.FirstOrDefault(p => p.GU_Password == pw);
 
-             
-                if (g1.Gu_Benutzername == usn && g2.GU_Password == pw /*&& g1 != null && g2 != null*/)
+                try
                 {
-                    m1 = new Menu2();
-                    m1.Show();
-                   
-                    return true;
+                    if (g1.Gu_Benutzername == usn && g2.GU_Password == pw)
+                    {
+                        m1 = new Menu2();
+                        m1.Show();
+
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                    
                 }
-                else
+                catch(Exception e)
                 {
-                    return false;
+                    MessageBox.Show(e.Message);
                 }
-               
-               
+                return false;
                 
             }
 
