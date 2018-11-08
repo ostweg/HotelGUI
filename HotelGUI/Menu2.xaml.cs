@@ -31,6 +31,10 @@ namespace HotelGUI
                 System.Environment.Exit(0);
             }
         }
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            c1.Content = new DisplayInformation();
+        }
 
         private void bClick(object sender, RoutedEventArgs e)
         {

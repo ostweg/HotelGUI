@@ -43,5 +43,7 @@ namespace HotelGUI
         {
             f2.Content = new Registration();
         }
+
+      
     }
 }

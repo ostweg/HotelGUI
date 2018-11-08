@@ -9,6 +9,7 @@
       Title="Hotels">
     
     <Grid>
+    
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>

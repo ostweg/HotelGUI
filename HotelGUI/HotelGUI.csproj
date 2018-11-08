@@ -75,6 +75,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="CheckData.cs" />
+    <Compile Include="DisplayInformation.xaml.cs">
+      <DependentUpon>DisplayInformation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GUIUSER.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -131,6 +134,10 @@
     <Compile Include="UpdateorDelete.xaml.cs">
       <DependentUpon>UpdateorDelete.xaml</DependentUpon>
     </Compile>
+    <Page Include="DisplayInformation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Hotels.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -230,11 +237,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="settings.png" />
     <Resource Include="noimg.png" />
     <Resource Include="23228.png" />
     <Resource Include="Lock-512.png" />
     <Resource Include="enter.png" />
     <Resource Include="100_Emoji.png" />
+    <Resource Include="logout.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
