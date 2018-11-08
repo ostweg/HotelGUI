@@ -110,7 +110,7 @@ namespace HotelGUI
                 }
                 catch(Exception e)
                 {
-                    MessageBox.Show(e.Message);
+                    MessageBox.Show("No User found in Database");
                 }
                 return false;
                 

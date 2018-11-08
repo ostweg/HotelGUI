@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
 
 namespace HotelGUI
 {
@@ -35,7 +36,7 @@ namespace HotelGUI
             //https://stackoverflow.com/questions/41998142/converting-system-drawing-image-to-system-windows-media-imagesource-with-no-resu
             foreach (HotelBild bild in l2)
             {
-
+                var f = bild.Beschreibung;
               this.frame1.Content = bild.Beschreibung;
             }
         }
@@ -48,7 +49,12 @@ namespace HotelGUI
 
         private void frame1_Loaded(object sender, RoutedEventArgs e)
         {
-            frame1.Content = new ShowHotels();
+            //frame1.Content = new ShowHotels();
+        }
+
+        private void DataGrid_Loaded(object sender, RoutedEventArgs e)
+        {
+            dataGrid.ItemsSource = m11.Hotels.ToList();
         }
     }
 }

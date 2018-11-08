@@ -8,11 +8,11 @@
         Title="MainWindow" Height="580" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="70"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Height="25" Content="Login" Width="200" BorderThickness="0,0,1,0" Click="Button_Click_1" >
+            <Button Height="70" Content="Login" Width="200" BorderThickness="0,0,1,0" Click="Button_Click_1" FontSize="25">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="White"/>
@@ -27,13 +27,13 @@
                         </Setter>
                         <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#FFE8F1F9"/>
+                                <Setter Property="Background" Value="#FF6F9CEC"/>
                             </Trigger>
                         </Style.Triggers>
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Height="25" Content="Sign Up" Width="200" Click="Button_Click_2" >
+            <Button Height="70" Content="Registration" Width="200" FontSize="25" Click="Button_Click_2" >
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="white"/>
@@ -48,7 +48,7 @@
                         </Setter>
                         <Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#FFE8F1F9"/>
+                                <Setter Property="Background" Value="#FF6F9CEC"/>
                             </Trigger>
                             
                         </Style.Triggers>
@@ -56,10 +56,10 @@
                 </Button.Style>
             </Button>
         </StackPanel>
-        <Grid Grid.Row="1" Background="AliceBlue">
+        <Grid Grid.Row="1" Background="CornflowerBlue">
 
         </Grid>
-        <Frame Grid.Row="1" Margin="20,0,20,20" Name="f2" Background="#FFE8F1F9" NavigationUIVisibility="Hidden">
+        <Frame Grid.Row="1" Margin="20,0,20,20" Name="f2" Background="#FF6F9CEC" NavigationUIVisibility="Hidden">
         
         </Frame>
         

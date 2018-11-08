@@ -24,7 +24,13 @@
             <Label Content="Interessted in having you hotel displayed?"></Label>
             <Button Content="Click here" Width="100" Click="gotosavemenu"></Button>
         </StackPanel>
+        <DataGrid Grid.Row="1" Name="dataGrid" Grid.RowSpan="2" Grid.ColumnSpan="3" Margin="30" Loaded="DataGrid_Loaded" ScrollViewer.CanContentScroll="True">
+            <DataGrid.Columns>
+                
 
+               
+            </DataGrid.Columns>
+            </DataGrid>
         <Frame Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="3" Name="frame1" Loaded="frame1_Loaded">
             
         </Frame>

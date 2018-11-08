@@ -139,7 +139,7 @@
 
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,350,0,0">
-            <TextBox Width="200px" Text="1" Name="tb13"/>
+            <ComboBox Width="200px" Text="Land auswählen" Name="tb13"/>
 
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,373,0,0">

@@ -22,10 +22,20 @@ namespace HotelGUI
     {
         CheckData d2 = new CheckData();
         UpdateorDelete up2 = new UpdateorDelete();
-        
+        public static M120Entities m120Entities = new M120Entities();
+        List<Land> l1 = m120Entities.Lands.ToList();
+
         public Registration()
         {
             InitializeComponent();
+            setDropDownList();
+        }
+        public void setDropDownList()
+        {
+            foreach(Land land in l1)
+            {
+                tb13.Items.Add(land.Name);
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -62,7 +72,7 @@ namespace HotelGUI
                 string uncheckedMobile = tb8.Text;
                 string uncheckedWeb = tb10.Text;
                 string uncheckedPassNr = tb12.Text;
-                long uncheckedNationalität = Convert.ToInt32(tb13.Text);
+                long uncheckedNationalität = l1.Find(x => x.Name == tb13.SelectedItem.ToString()).LandID; ;
                 
 
                 d2.saveUserToDB(uncheckedAnrede, uncheckedVorname, uncheckedName, uncheckedNameZ, uncheckedStrassenNr, uncheckedPlz, uncheckedOrt,
