@@ -13,13 +13,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Drawing;
+using System.Windows.Controls;
 
 namespace HotelGUI
 {
     /// <summary>
-    /// Interaktionslogik für PopUpSaveMenu.xaml
+    /// Interaktionslogik für AddHotels.xaml
     /// </summary>
-    public partial class PopUpSaveMenu : Window
+    public partial class AddHotels : Page
     {
         private string filePath;
         public string hName;
@@ -37,18 +38,15 @@ namespace HotelGUI
 
 
         CheckData checkData = new CheckData();
-        
-        public PopUpSaveMenu()
+        public AddHotels()
         {
-          
             InitializeComponent();
             setListDrop();
         }
-
         public void setListDrop()
         {
-           
-            
+
+
             foreach (Land land in l1)
             {
                 pu3.Items.Add(land.Name);
@@ -58,16 +56,16 @@ namespace HotelGUI
         {
             OpenFileDialog o1 = new OpenFileDialog();
             o1.Filter = "Bilder(.jpg,.png)|*.png;*.jpg";
-            if(o1.ShowDialog() == true)
+            if (o1.ShowDialog() == true)
             {
                 filePath = o1.FileName;
                 img1.Source = new BitmapImage(new Uri(filePath));
-                if(tbdesc.Text.Trim().Length == 0)
+                if (tbdesc.Text.Trim().Length == 0)
                 {
                     tbdesc.Text = System.IO.Path.GetFileName(filePath);
                 }
                 //checkData.SaveImageToByte(o1.FileName);
-               
+
             }
         }
 
@@ -82,11 +80,11 @@ namespace HotelGUI
         private void saveImage(object sender, RoutedEventArgs e)
         {
             //Save Image
-            if(tbdesc.Text != "")
+            if (tbdesc.Text != "")
             {
-                if(filePath != "")
+                if (filePath != "")
                 {
-                    checkData.SaveImageToByte(new Bitmap(filePath),tbdesc.Text,pu1.Text);
+                    checkData.SaveImageToByte(new Bitmap(filePath), tbdesc.Text, pu1.Text);
                 }
                 else
                 {
@@ -100,14 +98,14 @@ namespace HotelGUI
                 labelhidden.Foreground = new SolidColorBrush(Colors.PaleVioletRed);
                 labelhidden.Content = "Description can't be empty";
             }
-            
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-           
 
-            if(pu1.Text != "" && pu2.Text != "" && pu3.Text != "" && pu4.Text != "" && pu5.Text != "" && pu6.Text != null && pu7.Text != null && pu8.Text != "" && pu9.Text !="" && pu10.Text != "")
+
+            if (pu1.Text != "" && pu2.Text != "" && pu3.Text != "" && pu4.Text != "" && pu5.Text != "" && pu6.Text != null && pu7.Text != null && pu8.Text != "" && pu9.Text != "" && pu10.Text != "")
             {
                 hName = pu1.Text;
                 hOrt = pu2.Text;
@@ -119,14 +117,13 @@ namespace HotelGUI
                 hTelefon = pu8.Text;
                 hEmail = pu9.Text;
                 hWeb = pu10.Text;
-                checkData.saveHotelToDB(hName,hOrt,hLand,hSterne,hManager,hAnzahlZimmer,hTagesPreis,hTelefon,hEmail,hWeb);
+                checkData.saveHotelToDB(hName, hOrt, hLand, hSterne, hManager, hAnzahlZimmer, hTagesPreis, hTelefon, hEmail, hWeb);
 
             }
 
 
 
-            
+
         }
-        
     }
 }

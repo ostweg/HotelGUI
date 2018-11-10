@@ -71,7 +71,7 @@
 
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,350,0,0" Grid.Column="0">
-            <Label Content="Nationalität (1-200)"></Label>
+            <Label Content="Nationalität*"></Label>
         </StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,373,0,0" Grid.Column="0">
             <Label Content="Username*"></Label>

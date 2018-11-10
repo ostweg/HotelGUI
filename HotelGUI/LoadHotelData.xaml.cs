@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,25 +17,24 @@ using System.Windows.Shapes;
 namespace HotelGUI
 {
     /// <summary>
-    /// Interaktionslogik für Profile.xaml
+    /// Interaktionslogik für LoadHotelData.xaml
     /// </summary>
-    public partial class Profile : Page
+    public partial class LoadHotelData : Page
     {
-        
-        
-        public Profile()
+        public static M120Entities m11 = new M120Entities();
+        public LoadHotelData()
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void groupDataGrid()
         {
-            c3.Content = new UpdateorDelete();
+            //ICollectionView cv = CollectionViewSource.GetDefaultView(dataGrid.ItemsSource);
+            
         }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void DataGrid_Loaded(object sender, RoutedEventArgs e)
         {
-            c3.Content = new UserDiagram();
+            dataGrid.ItemsSource = m11.Hotels.ToList();
+                     
         }
     }
 }

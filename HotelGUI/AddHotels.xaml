@@ -1,0 +1,113 @@
+﻿<Page x:Class="HotelGUI.AddHotels"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HotelGUI"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Background="AliceBlue"
+      Title="AddHotels">
+    <Page.Resources>
+        <ControlTemplate TargetType="Button" x:Key="ImageButton">
+            <Image Source="100_Emoji.png"></Image>
+        </ControlTemplate>
+    </Page.Resources>
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="88px"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Content="Image description" Width="200px" FontSize="19"></Label>
+                <TextBox Name="tbdesc" Text="" Margin="0,4" Width="200px" ></TextBox>
+                <Button Content="Browse" Margin="0,5,0,0" Width="200px" Click="openDialog"></Button>
+
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="TOp" Orientation="Horizontal" Margin="0,50,0,0">
+                <Button Content="Save" Width="100" Click="saveImage"></Button>
+                <Button Content="Clear" Width="100" Click="Button_Click"></Button>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Vertical">
+                <Label Content="Image Preview" FontSize="19"></Label>
+
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                <Label Name="labelhidden" Width="300" Margin="0,0,0,10"></Label>
+            </StackPanel>
+            <StackPanel Grid.RowSpan="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,6,0,0">
+                <Label Content="Name" Name="ll1" Width="100" ></Label>
+                <TextBox Width="100" Name="pu1"></TextBox>
+            </StackPanel>
+            <StackPanel Grid.RowSpan="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,7,0,0">
+                <Label Content="Ort" Name="ll2" Width="100" Margin="0,25,0,0"></Label>
+                <TextBox Width="100" Name="pu2" Margin="0,25,0,0"></TextBox>
+            </StackPanel>
+            <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,57,0,0">
+                <Label Content="Land" Name="ll3" Width="100" ></Label>
+                <ComboBox Width="100" Name="pu3" Text="Land auswählen"></ComboBox>
+            </StackPanel>
+
+
+            <StackPanel Grid.RowSpan="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,100,0,0">
+                <Label Content="Sterne" Name="ll4" Width="100" ></Label>
+                <TextBox Width="100" Name="pu4" ></TextBox>
+            </StackPanel>
+            <StackPanel Grid.RowSpan="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal"  Margin="0,125,0,0">
+                <Label Content="Manager" Name="ll5" Width="100"></Label>
+                <TextBox Width="100" Name="pu5"></TextBox>
+            </StackPanel>
+            <StackPanel Grid.RowSpan="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,145,0,0">
+                <Label Content="AnzahlZimmer" Name="ll6" Width="100" ></Label>
+                <TextBox Width="100" Name="pu6" ></TextBox>
+            </StackPanel>
+            <StackPanel Grid.RowSpan="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal"  Margin="0,169,0,0">
+                <Label Content="TagesPreis" Name="ll7" Width="100"></Label>
+                <TextBox Width="100" Name="pu7"></TextBox>
+            </StackPanel>
+            <StackPanel Grid.RowSpan="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,215,0,0">
+                <Label Content="Telefon" Name="ll8" Width="100" ></Label>
+                <TextBox Width="100" Name="pu8"></TextBox>
+            </StackPanel>
+            <StackPanel Grid.RowSpan="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,240,0,0">
+                <Label Content="Email" Name="ll9" Width="100" ></Label>
+                <TextBox Width="100" Name="pu9" ></TextBox>
+            </StackPanel>
+            <StackPanel Grid.RowSpan="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,264,0,0">
+                <Label Content="Web" Name="l20" Width="100" ></Label>
+                <TextBox Width="100" Name="pu10" ></TextBox>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,218,0,0"  Orientation="Horizontal">
+                <Label Width="100"></Label>
+                <Button Width="100" Content="Submit" Click="Button_Click_1"></Button>
+
+            </StackPanel>
+            <StackPanel Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,248,0,0"  Orientation="Horizontal">
+                <Button Name="buttonan" Template="{StaticResource ImageButton}" Width="50">
+                    <Button.Triggers>
+                        <EventTrigger RoutedEvent="Loaded">
+                            <BeginStoryboard>
+                                <Storyboard AutoReverse="True" RepeatBehavior="Forever">
+                                    <DoubleAnimation Storyboard.TargetProperty="Opacity" To=".25" >
+
+                                    </DoubleAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Button.Triggers>
+                </Button>
+
+            </StackPanel>
+
+
+
+            <Image  Grid.Row="1" Grid.Column="1" Margin="70"  Source="noimg.png" Stretch="Fill" Name="img1"></Image>
+
+        </Grid>
+    </Grid>
+</Page>

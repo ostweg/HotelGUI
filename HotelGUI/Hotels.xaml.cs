@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
+using System.ComponentModel;
 
 namespace HotelGUI
 {
@@ -27,7 +28,7 @@ namespace HotelGUI
         public Hotels()
         {
             InitializeComponent();
-            iterateThroughList();
+            //iterateThroughList();
             
         }
         //TODO: Iterate through all images and give them out
@@ -37,13 +38,12 @@ namespace HotelGUI
             foreach (HotelBild bild in l2)
             {
                 var f = bild.Beschreibung;
-              this.frame1.Content = bild.Beschreibung;
+              //this.frame1.Content = bild.Beschreibung;
             }
         }
         private void gotosavemenu(object sender, RoutedEventArgs e)
         {
-            PopUpSaveMenu popupSave = new PopUpSaveMenu();
-            popupSave.Show();
+            
             
         }
 
@@ -54,7 +54,19 @@ namespace HotelGUI
 
         private void DataGrid_Loaded(object sender, RoutedEventArgs e)
         {
-            dataGrid.ItemsSource = m11.Hotels.ToList();
+            
+
+        }
+
+        private void ribbonButton3Click(object sender, RoutedEventArgs e)
+        {
+            frame1.Content = new AddHotels();
+            
+        }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            frame1.Content = new LoadHotelData();
         }
     }
 }

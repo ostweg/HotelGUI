@@ -85,10 +85,10 @@ namespace HotelGUI
 
                     if (k1.Anrede == "Frau" && l2.IsChecked == false)
                     {
-                        k1.Anrede = "Mann";
+                        k1.Anrede = "Herr";
                         hiddenLabel2.Content = updatedMessage();
                     }
-                    else if (k1.Anrede == "Mann" && l1.IsChecked == false)
+                    else if (k1.Anrede == "Herr" && l1.IsChecked == false)
                     {
                         k1.Anrede = "Frau";
                         hiddenLabel2.Content = updatedMessage();

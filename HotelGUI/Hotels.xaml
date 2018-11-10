@@ -3,7 +3,12 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ribbon="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
+      xmlns:ribbon1="clr-namespace:System.Windows.Controls.Ribbon.Primitives;assembly=System.Windows.Controls.Ribbon"
       xmlns:local="clr-namespace:HotelGUI"
+      
+      
+      
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Hotels">
@@ -11,28 +16,58 @@
     <Grid>
     
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="142"/>
             <RowDefinition Height="*"/>
-            <RowDefinition/>
-            <RowDefinition/>
+           
+           
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
-            <Label Content="Interessted in having you hotel displayed?"></Label>
-            <Button Content="Click here" Width="100" Click="gotosavemenu"></Button>
-        </StackPanel>
-        <DataGrid Grid.Row="1" Name="dataGrid" Grid.RowSpan="2" Grid.ColumnSpan="3" Margin="30" Loaded="DataGrid_Loaded" ScrollViewer.CanContentScroll="True">
-            <DataGrid.Columns>
-                
+       
+       
+        <DockPanel Grid.ColumnSpan="3">
+           <ribbon:Ribbon DockPanel.Dock="Top">
+                <Ribbon.ApplicationMenu >
+                    <RibbonApplicationMenu SmallImageSource="C:\Daten\404\HotelGUI\HotelGUI\Bilder\menu2.png">
+                        <RibbonApplicationMenuItem Name="item1" Header="This also does nothing" ImageSource="C:\Daten\404\HotelGUI\HotelGUI\Bilder\add.png"></RibbonApplicationMenuItem>
+                        <RibbonApplicationMenuItem Name="item2" Header="Test" ImageSource="C:\Daten\404\HotelGUI\HotelGUI\Bilder\update.png"></RibbonApplicationMenuItem>
 
-               
-            </DataGrid.Columns>
-            </DataGrid>
-        <Frame Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="3" Name="frame1" Loaded="frame1_Loaded">
+
+                        <RibbonApplicationMenu.AuxiliaryPaneContent>
+                            <RibbonGallery>
+                                <RibbonGalleryCategory>
+                                    <RibbonGalleryItem Name="item3" Content="This does nothing" MouseOverBackground="Transparent" MouseOverBorderBrush="Transparent" CheckedBackground="Transparent" CheckedBorderBrush="Transparent"/>
+                                </RibbonGalleryCategory>
+                            </RibbonGallery>
+                        </RibbonApplicationMenu.AuxiliaryPaneContent>
+                    </RibbonApplicationMenu>
+                    
+                </Ribbon.ApplicationMenu>
+                
+                <RibbonTab Name="tab1" Header="Show Hotels">
+                    <RibbonGroup Name="ribbonGroup1" Header="Sortieren">
+                        <RibbonButton  Name="button1" Label="Sort" LargeImageSource="C:\Daten\404\HotelGUI\HotelGUI\Bilder\sort.png"></RibbonButton>
+                    </RibbonGroup>
+                    <RibbonGroup Name="ribbonGroup2" Header="Sort based ID">
+                        <RibbonTextBox Name="ribbonTB" Text="Enter Id" ></RibbonTextBox>
+                        <RibbonButton Name="button2" LargeImageSource="C:\Daten\404\HotelGUI\HotelGUI\Bilder\submit.png" Height="36" HorizontalAlignment="Center"></RibbonButton>
+                    </RibbonGroup>
+                    <RibbonGroup Name="ribbonGroup3"   Header="Show Data" VerticalAlignment="Center">
+                        <RibbonButton Name="button4" Label="Show" LargeImageSource="C:\Daten\404\HotelGUI\HotelGUI\Bilder\load.png" Content="Load" Click="button4_Click"></RibbonButton>
+                    </RibbonGroup>
+                </RibbonTab>
+                <RibbonTab Name="tb2" Header="Add Hotels">
+                    <RibbonGroup Name="RibbonGroup2" Header="Add">
+                        <RibbonButton Name="button3" LargeImageSource="C:\Daten\404\HotelGUI\HotelGUI\Bilder\add.png" Click="ribbonButton3Click" ></RibbonButton>
+                    </RibbonGroup>
+                </RibbonTab>
+            </ribbon:Ribbon>
+        </DockPanel>
+        
+        <Frame Grid.Row="1" Grid.ColumnSpan="3" Name="frame1" Loaded="frame1_Loaded">
             
         </Frame>
     </Grid>

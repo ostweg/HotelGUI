@@ -15,7 +15,7 @@
             
         </Grid.RowDefinitions>
         <StackPanel VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="0">
-            <Button Content="Update/Delete" Width="200" BorderThickness="0,0,0,3" Click="Button_Click">
+            <Button Content="Update/Delete" Width="200" BorderThickness="0,0,0,3" Click="Button_Click" FontSize="19">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="CornflowerBlue"/>
@@ -36,7 +36,7 @@
                     </Style>
                 </Button.Style>
             </Button>
-            <Button Content="Stats" Width="200" BorderThickness="0,0,0,3">
+            <Button Content="Stats" Width="200" BorderThickness="0,0,0,3" FontSize="19" Click="Button_Click_1">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Background" Value="CornflowerBlue"/>

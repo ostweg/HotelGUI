@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
         <Label Grid.Column="0" Content="Update/Delete" FontSize="25" HorizontalAlignment="Center"></Label>
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Orientation="Horizontal">
-            <Label Width="200"  FontSize ="15" Content="What was your name again?" ></Label>
+            <Label Width="200"  FontSize ="15" Content="Name" ></Label>
             <TextBox Width="200" Name="tbLoad"></TextBox>
         </StackPanel>
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" Orientation="Horizontal">
