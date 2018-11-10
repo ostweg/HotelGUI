@@ -68,5 +68,10 @@ namespace HotelGUI
         {
             frame1.Content = new LoadHotelData();
         }
+
+        private void button5_Click(object sender, RoutedEventArgs e)
+        {
+            frame1.Content = new UpdateHotel();
+        }
     }
 }

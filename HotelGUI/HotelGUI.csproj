@@ -106,6 +106,9 @@
     <Compile Include="LoadHotelData.xaml.cs">
       <DependentUpon>LoadHotelData.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LoadUserData.xaml.cs">
+      <DependentUpon>LoadUserData.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -132,6 +135,9 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="UpdateHotel.xaml.cs">
+      <DependentUpon>UpdateHotel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UpdateorDelete.xaml.cs">
       <DependentUpon>UpdateorDelete.xaml</DependentUpon>
     </Compile>
@@ -151,6 +157,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="LoadHotelData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoadUserData.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -179,6 +189,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Registration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateHotel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

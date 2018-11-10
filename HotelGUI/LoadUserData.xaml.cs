@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,26 +16,19 @@ using System.Windows.Shapes;
 namespace HotelGUI
 {
     /// <summary>
-    /// Interaktionslogik für LoadHotelData.xaml
+    /// Interaktionslogik für LoadUserData.xaml
     /// </summary>
-    public partial class LoadHotelData : Page
+    public partial class LoadUserData : Page
     {
         public static M120Entities m11 = new M120Entities();
-        public LoadHotelData()
+        public LoadUserData()
         {
             InitializeComponent();
         }
-        public void groupDataGrid()
-        {
-            //ICollectionView cv = CollectionViewSource.GetDefaultView(dataGrid.ItemsSource);
-            
-        }
+
         private void DataGrid_Loaded(object sender, RoutedEventArgs e)
         {
-            dataGrid.ItemsSource = m11.Hotels.ToList();
-                     
+            dataGrid.ItemsSource = m11.Kundes.ToList();
         }
-
-        
     }
 }

@@ -36,5 +36,10 @@ namespace HotelGUI
         {
             c3.Content = new UserDiagram();
         }
+
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
+            c3.Content = new LoadUserData();
+        }
     }
 }

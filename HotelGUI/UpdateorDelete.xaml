@@ -24,7 +24,7 @@
             <Button Width="200" Content="Load" Click="Button_Click"></Button>
         </StackPanel>
         <StackPanel Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="center" Orientation="Horizontal" Margin="0,92,0,0">
-            <Label Width="200" Content="Anrede*" ></Label>
+            <Label Width="200" Content="Anrede" ></Label>
             <Label Content="Herr" Width="50"></Label>
             <RadioButton Width="50" Name="l1"></RadioButton>
             <Label Content="Frau" Width="50"></Label>
@@ -51,7 +51,7 @@
             <TextBox Width="200" Name="tbEmail"></TextBox>
         </StackPanel>
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="top" Orientation="Horizontal"  Margin="0,250,0,0">
-            <Label Content="Birthdate" Width="200"></Label>
+            <Label Content="Geburtsdatum" Width="200"></Label>
             <DatePicker Width="200" Name="tbBirthdate"></DatePicker>
         </StackPanel>
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="top" Orientation="Horizontal"  Margin="0,280,0,0">

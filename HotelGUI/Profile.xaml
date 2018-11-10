@@ -36,6 +36,27 @@
                     </Style>
                 </Button.Style>
             </Button>
+            <Button Content="Kunden Anzeigen" Width="200" BorderThickness="0,0,0,3" Click="Button_Click2" FontSize="19">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="CornflowerBlue"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="white"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
             <Button Content="Stats" Width="200" BorderThickness="0,0,0,3" FontSize="19" Click="Button_Click_1">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">

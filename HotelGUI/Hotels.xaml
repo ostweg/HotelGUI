@@ -61,7 +61,12 @@
                 </RibbonTab>
                 <RibbonTab Name="tb2" Header="Add Hotels">
                     <RibbonGroup Name="RibbonGroup2" Header="Add">
-                        <RibbonButton Name="button3" LargeImageSource="C:\Daten\404\HotelGUI\HotelGUI\Bilder\add.png" Click="ribbonButton3Click" ></RibbonButton>
+                        <RibbonButton Name="button3" Label="Add" LargeImageSource="C:\Daten\404\HotelGUI\HotelGUI\Bilder\add.png" Click="ribbonButton3Click" ></RibbonButton>
+                    </RibbonGroup>
+                </RibbonTab>
+                <RibbonTab Name="tb3" Header="Delete/Update Hotel">
+                    <RibbonGroup Name="ribbonGroup4" Header="Delete">
+                        <RibbonButton Name="button5" Label="Delete/Update" LargeImageSource="C:\Daten\404\HotelGUI\HotelGUI\Bilder\delete.png" Click="button5_Click" ></RibbonButton>
                     </RibbonGroup>
                 </RibbonTab>
             </ribbon:Ribbon>
