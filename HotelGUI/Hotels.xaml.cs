@@ -27,7 +27,7 @@ namespace HotelGUI
         CheckData ch1 = new CheckData();
         public static M120Entities m11 = new M120Entities();
         List<HotelBild> l2 = m11.HotelBilds.ToList();
-        Bitmap b1;
+       
         public byte[] byteimagedata;
         public Hotels()
         {

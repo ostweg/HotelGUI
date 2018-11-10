@@ -43,7 +43,7 @@ namespace HotelGUI
                         hiddenLabel.Foreground = new SolidColorBrush(Colors.ForestGreen);
                         hiddenLabel.Content = "Hotel found";
 
-                        tbOrt.Text = k1.Ort;
+                        tbOOrt.Text = k1.Ort;
                         tbLand.Text = k2.Name;
                         tbSterne.Text = k1.Sterne.ToString();
                         tbManager.Text = k1.Manager;
@@ -80,9 +80,9 @@ namespace HotelGUI
                 {
 
 
-                    if (tbOrt.Text != k1.Ort)
+                    if (tbOOrt.Text != k1.Ort)
                     {
-                        k1.Ort = tbOrt.Text;
+                        k1.Ort = tbOOrt.Text;
                         hiddenLabel2.Content = updatedMessage();
                     }
                     else if (tbLand.Text != k2.Name)
