@@ -26,8 +26,8 @@
             <ColumnDefinition/>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-       
-       
+
+        <Image Grid.Row="1" Name="l1"></Image>
         <DockPanel Grid.ColumnSpan="3">
            <ribbon:Ribbon DockPanel.Dock="Top">
                 <Ribbon.ApplicationMenu >

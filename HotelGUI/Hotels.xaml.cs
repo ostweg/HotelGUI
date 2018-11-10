@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
 using System.ComponentModel;
+using System.Drawing;
+using System.IO;
 
 namespace HotelGUI
 {
@@ -25,10 +27,12 @@ namespace HotelGUI
         CheckData ch1 = new CheckData();
         public static M120Entities m11 = new M120Entities();
         List<HotelBild> l2 = m11.HotelBilds.ToList();
+        Bitmap b1;
+        public byte[] byteimagedata;
         public Hotels()
         {
             InitializeComponent();
-            //iterateThroughList();
+            iterateThroughList();
             
         }
         //TODO: Iterate through all images and give them out
@@ -37,9 +41,15 @@ namespace HotelGUI
             //https://stackoverflow.com/questions/41998142/converting-system-drawing-image-to-system-windows-media-imagesource-with-no-resu
             foreach (HotelBild bild in l2)
             {
-                var f = bild.Beschreibung;
-              //this.frame1.Content = bild.Beschreibung;
+                
+                /*System.Drawing.Image b1 = ch1.bytearray(bild.Bild);
+                var b2 = Encoding.Default.GetString(bild.Bild);
+                l1.Source = new BitmapImage(new Uri(b2));*/
+
+                
+                
             }
+           
         }
         private void gotosavemenu(object sender, RoutedEventArgs e)
         {
